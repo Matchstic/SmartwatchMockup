@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C954138E1F6AA270003DBD1A /* SuperApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954138C1F6AA270003DBD1A /* SuperApplication.cpp */; };
 		C95413951F6AE4B1003DBD1A /* ClockApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95413931F6AE4B1003DBD1A /* ClockApplication.cpp */; };
 		C95413981F6B1659003DBD1A /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95413961F6B1659003DBD1A /* Circle.cpp */; };
+		C954139B1F6B2DB9003DBD1A /* SuperApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95413991F6B2DB9003DBD1A /* SuperApplication.cpp */; };
 		C9662AF91F68768800CF603C /* ImageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9662AF71F68768800CF603C /* ImageView.cpp */; };
 		C9662AFC1F68800400CF603C /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9662AFA1F68800400CF603C /* Label.cpp */; };
 		C9730F411F6808C300279634 /* font.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730F391F6808C300279634 /* font.c */; };
@@ -39,12 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C954138C1F6AA270003DBD1A /* SuperApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuperApplication.cpp; sourceTree = "<group>"; };
-		C954138D1F6AA270003DBD1A /* SuperApplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuperApplication.hpp; sourceTree = "<group>"; };
 		C95413931F6AE4B1003DBD1A /* ClockApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClockApplication.cpp; path = Sketch/Applications/ClockApplication.cpp; sourceTree = "<group>"; };
 		C95413941F6AE4B1003DBD1A /* ClockApplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ClockApplication.hpp; path = Sketch/Applications/ClockApplication.hpp; sourceTree = "<group>"; };
 		C95413961F6B1659003DBD1A /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = Sketch/UI/Circle.cpp; sourceTree = "<group>"; };
 		C95413971F6B1659003DBD1A /* Circle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Circle.hpp; path = Sketch/UI/Circle.hpp; sourceTree = "<group>"; };
+		C95413991F6B2DB9003DBD1A /* SuperApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SuperApplication.cpp; path = Sketch/Applications/SuperApplication.cpp; sourceTree = "<group>"; };
+		C954139A1F6B2DB9003DBD1A /* SuperApplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SuperApplication.hpp; path = Sketch/Applications/SuperApplication.hpp; sourceTree = "<group>"; };
 		C9662AF71F68768800CF603C /* ImageView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageView.cpp; path = Sketch/UI/ImageView.cpp; sourceTree = "<group>"; };
 		C9662AF81F68768800CF603C /* ImageView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageView.hpp; path = Sketch/UI/ImageView.hpp; sourceTree = "<group>"; };
 		C9662AFA1F68800400CF603C /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Label.cpp; path = Sketch/UI/Label.cpp; sourceTree = "<group>"; };
@@ -300,8 +300,8 @@
 				C9730FDC1F68216200279634 /* Application.hpp */,
 				C95413931F6AE4B1003DBD1A /* ClockApplication.cpp */,
 				C95413941F6AE4B1003DBD1A /* ClockApplication.hpp */,
-				C954138C1F6AA270003DBD1A /* SuperApplication.cpp */,
-				C954138D1F6AA270003DBD1A /* SuperApplication.hpp */,
+				C95413991F6B2DB9003DBD1A /* SuperApplication.cpp */,
+				C954139A1F6B2DB9003DBD1A /* SuperApplication.hpp */,
 			);
 			name = Applications;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 				C95413981F6B1659003DBD1A /* Circle.cpp in Sources */,
 				C9730FD71F6811B000279634 /* dtostrf.c in Sources */,
 				C9730F851F68093800279634 /* Adafruit_SharpMem.mm in Sources */,
-				C954138E1F6AA270003DBD1A /* SuperApplication.cpp in Sources */,
+				C954139B1F6B2DB9003DBD1A /* SuperApplication.cpp in Sources */,
 				C9730FD41F68117B00279634 /* itoa.c in Sources */,
 				C9730FDD1F68216200279634 /* Application.cpp in Sources */,
 				C990790C1F66E5F600A37C6B /* SWMMainViewController.mm in Sources */,
