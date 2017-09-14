@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C954138E1F6AA270003DBD1A /* SuperApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954138C1F6AA270003DBD1A /* SuperApplication.cpp */; };
+		C95413951F6AE4B1003DBD1A /* ClockApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95413931F6AE4B1003DBD1A /* ClockApplication.cpp */; };
+		C95413981F6B1659003DBD1A /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C95413961F6B1659003DBD1A /* Circle.cpp */; };
+		C9662AF91F68768800CF603C /* ImageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9662AF71F68768800CF603C /* ImageView.cpp */; };
+		C9662AFC1F68800400CF603C /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9662AFA1F68800400CF603C /* Label.cpp */; };
+		C9730F411F6808C300279634 /* font.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730F391F6808C300279634 /* font.c */; };
+		C9730F421F6808C300279634 /* font_DejaVuSerif_8.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730F3B1F6808C300279634 /* font_DejaVuSerif_8.c */; };
+		C9730F431F6808C300279634 /* font_DejaVuSerif_9.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730F3C1F6808C300279634 /* font_DejaVuSerif_9.c */; };
+		C9730F441F6808C300279634 /* Framebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9730F3D1F6808C300279634 /* Framebuffer.cpp */; };
+		C9730F451F6808C300279634 /* SharpLCD.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9730F401F6808C300279634 /* SharpLCD.mm */; };
+		C9730F801F6808FB00279634 /* Adafruit_GFX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9730F471F6808FB00279634 /* Adafruit_GFX.cpp */; };
+		C9730F811F6808FB00279634 /* Tiny3x3a2pt7b in Resources */ = {isa = PBXBuildFile; fileRef = C9730F7C1F6808FB00279634 /* Tiny3x3a2pt7b */; };
+		C9730F821F6808FB00279634 /* glcdfont.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730F7F1F6808FB00279634 /* glcdfont.c */; };
+		C9730F851F68093800279634 /* Adafruit_SharpMem.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9730F831F68093800279634 /* Adafruit_SharpMem.mm */; };
+		C9730FC21F680BA300279634 /* Print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9730F9E1F680BA300279634 /* Print.cpp */; };
+		C9730FD11F680D2C00279634 /* WString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9730FCF1F680D2C00279634 /* WString.cpp */; };
+		C9730FD41F68117B00279634 /* itoa.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730FD21F68117B00279634 /* itoa.c */; };
+		C9730FD71F6811B000279634 /* dtostrf.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730FD51F6811B000279634 /* dtostrf.c */; };
+		C9730FDA1F681B5200279634 /* Arduino.c in Sources */ = {isa = PBXBuildFile; fileRef = C9730FD91F681B5200279634 /* Arduino.c */; };
+		C9730FDD1F68216200279634 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9730FDB1F68216200279634 /* Application.cpp */; };
+		C9730FE11F68245B00279634 /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9730FDF1F68245B00279634 /* View.cpp */; };
+		C99078F01F66E33F00A37C6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C99078EF1F66E33F00A37C6B /* AppDelegate.m */; };
+		C99078F31F66E33F00A37C6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C99078F21F66E33F00A37C6B /* main.m */; };
+		C99078F51F66E33F00A37C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99078F41F66E33F00A37C6B /* Assets.xcassets */; };
+		C99078F81F66E33F00A37C6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99078F61F66E33F00A37C6B /* MainMenu.xib */; };
+		C990790C1F66E5F600A37C6B /* SWMMainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C990790B1F66E5F600A37C6B /* SWMMainViewController.mm */; };
+		C990790F1F66EB2B00A37C6B /* breakout.png in Resources */ = {isa = PBXBuildFile; fileRef = C990790E1F66EB2B00A37C6B /* breakout.png */; };
+		C99079121F66EC2E00A37C6B /* SWMLCDView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C99079111F66EC2E00A37C6B /* SWMLCDView.mm */; };
+		C99079161F67224600A37C6B /* Smartwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C99079141F67224600A37C6B /* Smartwatch.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C954138C1F6AA270003DBD1A /* SuperApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SuperApplication.cpp; sourceTree = "<group>"; };
+		C954138D1F6AA270003DBD1A /* SuperApplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuperApplication.hpp; sourceTree = "<group>"; };
+		C95413931F6AE4B1003DBD1A /* ClockApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ClockApplication.cpp; path = Sketch/Applications/ClockApplication.cpp; sourceTree = "<group>"; };
+		C95413941F6AE4B1003DBD1A /* ClockApplication.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ClockApplication.hpp; path = Sketch/Applications/ClockApplication.hpp; sourceTree = "<group>"; };
+		C95413961F6B1659003DBD1A /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = Sketch/UI/Circle.cpp; sourceTree = "<group>"; };
+		C95413971F6B1659003DBD1A /* Circle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Circle.hpp; path = Sketch/UI/Circle.hpp; sourceTree = "<group>"; };
+		C9662AF71F68768800CF603C /* ImageView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageView.cpp; path = Sketch/UI/ImageView.cpp; sourceTree = "<group>"; };
+		C9662AF81F68768800CF603C /* ImageView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageView.hpp; path = Sketch/UI/ImageView.hpp; sourceTree = "<group>"; };
+		C9662AFA1F68800400CF603C /* Label.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Label.cpp; path = Sketch/UI/Label.cpp; sourceTree = "<group>"; };
+		C9662AFB1F68800400CF603C /* Label.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Label.hpp; path = Sketch/UI/Label.hpp; sourceTree = "<group>"; };
+		C9730F391F6808C300279634 /* font.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = font.c; sourceTree = "<group>"; };
+		C9730F3A1F6808C300279634 /* font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = font.h; sourceTree = "<group>"; };
+		C9730F3B1F6808C300279634 /* font_DejaVuSerif_8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = font_DejaVuSerif_8.c; sourceTree = "<group>"; };
+		C9730F3C1F6808C300279634 /* font_DejaVuSerif_9.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = font_DejaVuSerif_9.c; sourceTree = "<group>"; };
+		C9730F3D1F6808C300279634 /* Framebuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Framebuffer.cpp; sourceTree = "<group>"; };
+		C9730F3E1F6808C300279634 /* Framebuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Framebuffer.hpp; sourceTree = "<group>"; };
+		C9730F3F1F6808C300279634 /* SharpLCD.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SharpLCD.hpp; sourceTree = "<group>"; };
+		C9730F401F6808C300279634 /* SharpLCD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SharpLCD.mm; sourceTree = "<group>"; };
+		C9730F471F6808FB00279634 /* Adafruit_GFX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Adafruit_GFX.cpp; sourceTree = "<group>"; };
+		C9730F481F6808FB00279634 /* Adafruit_GFX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adafruit_GFX.h; sourceTree = "<group>"; };
+		C9730F4A1F6808FB00279634 /* FreeMono12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMono12pt7b.h; sourceTree = "<group>"; };
+		C9730F4B1F6808FB00279634 /* FreeMono18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMono18pt7b.h; sourceTree = "<group>"; };
+		C9730F4C1F6808FB00279634 /* FreeMono24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMono24pt7b.h; sourceTree = "<group>"; };
+		C9730F4D1F6808FB00279634 /* FreeMono9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMono9pt7b.h; sourceTree = "<group>"; };
+		C9730F4E1F6808FB00279634 /* FreeMonoBold12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBold12pt7b.h; sourceTree = "<group>"; };
+		C9730F4F1F6808FB00279634 /* FreeMonoBold18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBold18pt7b.h; sourceTree = "<group>"; };
+		C9730F501F6808FB00279634 /* FreeMonoBold24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBold24pt7b.h; sourceTree = "<group>"; };
+		C9730F511F6808FB00279634 /* FreeMonoBold9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBold9pt7b.h; sourceTree = "<group>"; };
+		C9730F521F6808FB00279634 /* FreeMonoBoldOblique12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBoldOblique12pt7b.h; sourceTree = "<group>"; };
+		C9730F531F6808FB00279634 /* FreeMonoBoldOblique18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBoldOblique18pt7b.h; sourceTree = "<group>"; };
+		C9730F541F6808FB00279634 /* FreeMonoBoldOblique24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBoldOblique24pt7b.h; sourceTree = "<group>"; };
+		C9730F551F6808FB00279634 /* FreeMonoBoldOblique9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoBoldOblique9pt7b.h; sourceTree = "<group>"; };
+		C9730F561F6808FB00279634 /* FreeMonoOblique12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoOblique12pt7b.h; sourceTree = "<group>"; };
+		C9730F571F6808FB00279634 /* FreeMonoOblique18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoOblique18pt7b.h; sourceTree = "<group>"; };
+		C9730F581F6808FB00279634 /* FreeMonoOblique24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoOblique24pt7b.h; sourceTree = "<group>"; };
+		C9730F591F6808FB00279634 /* FreeMonoOblique9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeMonoOblique9pt7b.h; sourceTree = "<group>"; };
+		C9730F5A1F6808FB00279634 /* FreeSans12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSans12pt7b.h; sourceTree = "<group>"; };
+		C9730F5B1F6808FB00279634 /* FreeSans18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSans18pt7b.h; sourceTree = "<group>"; };
+		C9730F5C1F6808FB00279634 /* FreeSans24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSans24pt7b.h; sourceTree = "<group>"; };
+		C9730F5D1F6808FB00279634 /* FreeSans9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSans9pt7b.h; sourceTree = "<group>"; };
+		C9730F5E1F6808FB00279634 /* FreeSansBold12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBold12pt7b.h; sourceTree = "<group>"; };
+		C9730F5F1F6808FB00279634 /* FreeSansBold18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBold18pt7b.h; sourceTree = "<group>"; };
+		C9730F601F6808FB00279634 /* FreeSansBold24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBold24pt7b.h; sourceTree = "<group>"; };
+		C9730F611F6808FB00279634 /* FreeSansBold9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBold9pt7b.h; sourceTree = "<group>"; };
+		C9730F621F6808FB00279634 /* FreeSansBoldOblique12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBoldOblique12pt7b.h; sourceTree = "<group>"; };
+		C9730F631F6808FB00279634 /* FreeSansBoldOblique18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBoldOblique18pt7b.h; sourceTree = "<group>"; };
+		C9730F641F6808FB00279634 /* FreeSansBoldOblique24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBoldOblique24pt7b.h; sourceTree = "<group>"; };
+		C9730F651F6808FB00279634 /* FreeSansBoldOblique9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansBoldOblique9pt7b.h; sourceTree = "<group>"; };
+		C9730F661F6808FB00279634 /* FreeSansOblique12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansOblique12pt7b.h; sourceTree = "<group>"; };
+		C9730F671F6808FB00279634 /* FreeSansOblique18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansOblique18pt7b.h; sourceTree = "<group>"; };
+		C9730F681F6808FB00279634 /* FreeSansOblique24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansOblique24pt7b.h; sourceTree = "<group>"; };
+		C9730F691F6808FB00279634 /* FreeSansOblique9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSansOblique9pt7b.h; sourceTree = "<group>"; };
+		C9730F6A1F6808FB00279634 /* FreeSerif12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerif12pt7b.h; sourceTree = "<group>"; };
+		C9730F6B1F6808FB00279634 /* FreeSerif18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerif18pt7b.h; sourceTree = "<group>"; };
+		C9730F6C1F6808FB00279634 /* FreeSerif24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerif24pt7b.h; sourceTree = "<group>"; };
+		C9730F6D1F6808FB00279634 /* FreeSerif9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerif9pt7b.h; sourceTree = "<group>"; };
+		C9730F6E1F6808FB00279634 /* FreeSerifBold12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBold12pt7b.h; sourceTree = "<group>"; };
+		C9730F6F1F6808FB00279634 /* FreeSerifBold18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBold18pt7b.h; sourceTree = "<group>"; };
+		C9730F701F6808FB00279634 /* FreeSerifBold24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBold24pt7b.h; sourceTree = "<group>"; };
+		C9730F711F6808FB00279634 /* FreeSerifBold9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBold9pt7b.h; sourceTree = "<group>"; };
+		C9730F721F6808FB00279634 /* FreeSerifBoldItalic12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBoldItalic12pt7b.h; sourceTree = "<group>"; };
+		C9730F731F6808FB00279634 /* FreeSerifBoldItalic18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBoldItalic18pt7b.h; sourceTree = "<group>"; };
+		C9730F741F6808FB00279634 /* FreeSerifBoldItalic24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBoldItalic24pt7b.h; sourceTree = "<group>"; };
+		C9730F751F6808FB00279634 /* FreeSerifBoldItalic9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifBoldItalic9pt7b.h; sourceTree = "<group>"; };
+		C9730F761F6808FB00279634 /* FreeSerifItalic12pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifItalic12pt7b.h; sourceTree = "<group>"; };
+		C9730F771F6808FB00279634 /* FreeSerifItalic18pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifItalic18pt7b.h; sourceTree = "<group>"; };
+		C9730F781F6808FB00279634 /* FreeSerifItalic24pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifItalic24pt7b.h; sourceTree = "<group>"; };
+		C9730F791F6808FB00279634 /* FreeSerifItalic9pt7b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeSerifItalic9pt7b.h; sourceTree = "<group>"; };
+		C9730F7A1F6808FB00279634 /* Org_01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Org_01.h; sourceTree = "<group>"; };
+		C9730F7B1F6808FB00279634 /* Picopixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picopixel.h; sourceTree = "<group>"; };
+		C9730F7C1F6808FB00279634 /* Tiny3x3a2pt7b */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tiny3x3a2pt7b; sourceTree = "<group>"; };
+		C9730F7D1F6808FB00279634 /* TomThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TomThumb.h; sourceTree = "<group>"; };
+		C9730F7E1F6808FB00279634 /* gfxfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfxfont.h; sourceTree = "<group>"; };
+		C9730F7F1F6808FB00279634 /* glcdfont.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glcdfont.c; sourceTree = "<group>"; };
+		C9730F831F68093800279634 /* Adafruit_SharpMem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Adafruit_SharpMem.mm; sourceTree = "<group>"; };
+		C9730F841F68093800279634 /* Adafruit_SharpMem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Adafruit_SharpMem.hpp; sourceTree = "<group>"; };
+		C9730F8B1F680BA300279634 /* Arduino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arduino.h; sourceTree = "<group>"; };
+		C9730F8C1F680BA300279634 /* binary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = binary.h; sourceTree = "<group>"; };
+		C9730F9E1F680BA300279634 /* Print.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Print.cpp; sourceTree = "<group>"; };
+		C9730F9F1F680BA300279634 /* Print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Print.h; sourceTree = "<group>"; };
+		C9730FCF1F680D2C00279634 /* WString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WString.cpp; sourceTree = "<group>"; };
+		C9730FD01F680D2C00279634 /* WString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WString.h; sourceTree = "<group>"; };
+		C9730FD21F68117B00279634 /* itoa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = itoa.c; sourceTree = "<group>"; };
+		C9730FD31F68117B00279634 /* itoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itoa.h; sourceTree = "<group>"; };
+		C9730FD51F6811B000279634 /* dtostrf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dtostrf.c; sourceTree = "<group>"; };
+		C9730FD61F6811B000279634 /* dtostrf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtostrf.h; sourceTree = "<group>"; };
+		C9730FD81F68122900279634 /* Printable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Printable.h; sourceTree = "<group>"; };
+		C9730FD91F681B5200279634 /* Arduino.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Arduino.c; sourceTree = "<group>"; };
+		C9730FDB1F68216200279634 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = Sketch/Applications/Application.cpp; sourceTree = "<group>"; };
+		C9730FDC1F68216200279634 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Application.hpp; path = Sketch/Applications/Application.hpp; sourceTree = "<group>"; };
+		C9730FDF1F68245B00279634 /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = View.cpp; path = Sketch/UI/View.cpp; sourceTree = "<group>"; };
+		C9730FE01F68245B00279634 /* View.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = View.hpp; path = Sketch/UI/View.hpp; sourceTree = "<group>"; };
+		C9730FE41F68258600279634 /* Structures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Structures.h; path = Sketch/Structures.h; sourceTree = "<group>"; };
+		C99078EB1F66E33F00A37C6B /* SmartwatchMockup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartwatchMockup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C99078EE1F66E33F00A37C6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C99078EF1F66E33F00A37C6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C99078F21F66E33F00A37C6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C99078F41F66E33F00A37C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C99078F71F66E33F00A37C6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C99078F91F66E33F00A37C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C990790A1F66E5F600A37C6B /* SWMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWMMainViewController.h; sourceTree = "<group>"; };
+		C990790B1F66E5F600A37C6B /* SWMMainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SWMMainViewController.mm; sourceTree = "<group>"; };
+		C990790E1F66EB2B00A37C6B /* breakout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakout.png; sourceTree = "<group>"; };
+		C99079101F66EC2E00A37C6B /* SWMLCDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWMLCDView.h; sourceTree = "<group>"; };
+		C99079111F66EC2E00A37C6B /* SWMLCDView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SWMLCDView.mm; sourceTree = "<group>"; };
+		C99079141F67224600A37C6B /* Smartwatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Smartwatch.cpp; path = Sketch/Smartwatch.cpp; sourceTree = "<group>"; };
+		C99079151F67224600A37C6B /* Smartwatch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Smartwatch.hpp; path = Sketch/Smartwatch.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C99078E81F66E33E00A37C6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9730F381F6808C300279634 /* mbed */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F881F68096100279634 /* Sharp LCD */,
+			);
+			name = mbed;
+			path = Library/mbed;
+			sourceTree = "<group>";
+		};
+		C9730F461F6808FB00279634 /* Adafruit */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F891F680BA300279634 /* arduino */,
+				C9730F871F68095600279634 /* Sharp LCD */,
+				C9730F861F68094100279634 /* Adafruit GFX */,
+			);
+			name = Adafruit;
+			path = Library/Adafruit;
+			sourceTree = "<group>";
+		};
+		C9730F491F6808FB00279634 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F4A1F6808FB00279634 /* FreeMono12pt7b.h */,
+				C9730F4B1F6808FB00279634 /* FreeMono18pt7b.h */,
+				C9730F4C1F6808FB00279634 /* FreeMono24pt7b.h */,
+				C9730F4D1F6808FB00279634 /* FreeMono9pt7b.h */,
+				C9730F4E1F6808FB00279634 /* FreeMonoBold12pt7b.h */,
+				C9730F4F1F6808FB00279634 /* FreeMonoBold18pt7b.h */,
+				C9730F501F6808FB00279634 /* FreeMonoBold24pt7b.h */,
+				C9730F511F6808FB00279634 /* FreeMonoBold9pt7b.h */,
+				C9730F521F6808FB00279634 /* FreeMonoBoldOblique12pt7b.h */,
+				C9730F531F6808FB00279634 /* FreeMonoBoldOblique18pt7b.h */,
+				C9730F541F6808FB00279634 /* FreeMonoBoldOblique24pt7b.h */,
+				C9730F551F6808FB00279634 /* FreeMonoBoldOblique9pt7b.h */,
+				C9730F561F6808FB00279634 /* FreeMonoOblique12pt7b.h */,
+				C9730F571F6808FB00279634 /* FreeMonoOblique18pt7b.h */,
+				C9730F581F6808FB00279634 /* FreeMonoOblique24pt7b.h */,
+				C9730F591F6808FB00279634 /* FreeMonoOblique9pt7b.h */,
+				C9730F5A1F6808FB00279634 /* FreeSans12pt7b.h */,
+				C9730F5B1F6808FB00279634 /* FreeSans18pt7b.h */,
+				C9730F5C1F6808FB00279634 /* FreeSans24pt7b.h */,
+				C9730F5D1F6808FB00279634 /* FreeSans9pt7b.h */,
+				C9730F5E1F6808FB00279634 /* FreeSansBold12pt7b.h */,
+				C9730F5F1F6808FB00279634 /* FreeSansBold18pt7b.h */,
+				C9730F601F6808FB00279634 /* FreeSansBold24pt7b.h */,
+				C9730F611F6808FB00279634 /* FreeSansBold9pt7b.h */,
+				C9730F621F6808FB00279634 /* FreeSansBoldOblique12pt7b.h */,
+				C9730F631F6808FB00279634 /* FreeSansBoldOblique18pt7b.h */,
+				C9730F641F6808FB00279634 /* FreeSansBoldOblique24pt7b.h */,
+				C9730F651F6808FB00279634 /* FreeSansBoldOblique9pt7b.h */,
+				C9730F661F6808FB00279634 /* FreeSansOblique12pt7b.h */,
+				C9730F671F6808FB00279634 /* FreeSansOblique18pt7b.h */,
+				C9730F681F6808FB00279634 /* FreeSansOblique24pt7b.h */,
+				C9730F691F6808FB00279634 /* FreeSansOblique9pt7b.h */,
+				C9730F6A1F6808FB00279634 /* FreeSerif12pt7b.h */,
+				C9730F6B1F6808FB00279634 /* FreeSerif18pt7b.h */,
+				C9730F6C1F6808FB00279634 /* FreeSerif24pt7b.h */,
+				C9730F6D1F6808FB00279634 /* FreeSerif9pt7b.h */,
+				C9730F6E1F6808FB00279634 /* FreeSerifBold12pt7b.h */,
+				C9730F6F1F6808FB00279634 /* FreeSerifBold18pt7b.h */,
+				C9730F701F6808FB00279634 /* FreeSerifBold24pt7b.h */,
+				C9730F711F6808FB00279634 /* FreeSerifBold9pt7b.h */,
+				C9730F721F6808FB00279634 /* FreeSerifBoldItalic12pt7b.h */,
+				C9730F731F6808FB00279634 /* FreeSerifBoldItalic18pt7b.h */,
+				C9730F741F6808FB00279634 /* FreeSerifBoldItalic24pt7b.h */,
+				C9730F751F6808FB00279634 /* FreeSerifBoldItalic9pt7b.h */,
+				C9730F761F6808FB00279634 /* FreeSerifItalic12pt7b.h */,
+				C9730F771F6808FB00279634 /* FreeSerifItalic18pt7b.h */,
+				C9730F781F6808FB00279634 /* FreeSerifItalic24pt7b.h */,
+				C9730F791F6808FB00279634 /* FreeSerifItalic9pt7b.h */,
+				C9730F7A1F6808FB00279634 /* Org_01.h */,
+				C9730F7B1F6808FB00279634 /* Picopixel.h */,
+				C9730F7C1F6808FB00279634 /* Tiny3x3a2pt7b */,
+				C9730F7D1F6808FB00279634 /* TomThumb.h */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C9730F861F68094100279634 /* Adafruit GFX */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F471F6808FB00279634 /* Adafruit_GFX.cpp */,
+				C9730F481F6808FB00279634 /* Adafruit_GFX.h */,
+				C9730F491F6808FB00279634 /* Fonts */,
+				C9730F7E1F6808FB00279634 /* gfxfont.h */,
+				C9730F7F1F6808FB00279634 /* glcdfont.c */,
+			);
+			name = "Adafruit GFX";
+			sourceTree = "<group>";
+		};
+		C9730F871F68095600279634 /* Sharp LCD */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F831F68093800279634 /* Adafruit_SharpMem.mm */,
+				C9730F841F68093800279634 /* Adafruit_SharpMem.hpp */,
+			);
+			name = "Sharp LCD";
+			sourceTree = "<group>";
+		};
+		C9730F881F68096100279634 /* Sharp LCD */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F391F6808C300279634 /* font.c */,
+				C9730F3A1F6808C300279634 /* font.h */,
+				C9730F3B1F6808C300279634 /* font_DejaVuSerif_8.c */,
+				C9730F3C1F6808C300279634 /* font_DejaVuSerif_9.c */,
+				C9730F3D1F6808C300279634 /* Framebuffer.cpp */,
+				C9730F3E1F6808C300279634 /* Framebuffer.hpp */,
+				C9730F3F1F6808C300279634 /* SharpLCD.hpp */,
+				C9730F401F6808C300279634 /* SharpLCD.mm */,
+			);
+			name = "Sharp LCD";
+			sourceTree = "<group>";
+		};
+		C9730F891F680BA300279634 /* arduino */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F8B1F680BA300279634 /* Arduino.h */,
+				C9730FD91F681B5200279634 /* Arduino.c */,
+				C9730F8C1F680BA300279634 /* binary.h */,
+				C9730F9E1F680BA300279634 /* Print.cpp */,
+				C9730F9F1F680BA300279634 /* Print.h */,
+				C9730FCF1F680D2C00279634 /* WString.cpp */,
+				C9730FD81F68122900279634 /* Printable.h */,
+				C9730FD21F68117B00279634 /* itoa.c */,
+				C9730FD31F68117B00279634 /* itoa.h */,
+				C9730FD51F6811B000279634 /* dtostrf.c */,
+				C9730FD61F6811B000279634 /* dtostrf.h */,
+				C9730FD01F680D2C00279634 /* WString.h */,
+			);
+			path = arduino;
+			sourceTree = "<group>";
+		};
+		C9730FDE1F68217B00279634 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				C9730FDB1F68216200279634 /* Application.cpp */,
+				C9730FDC1F68216200279634 /* Application.hpp */,
+				C95413931F6AE4B1003DBD1A /* ClockApplication.cpp */,
+				C95413941F6AE4B1003DBD1A /* ClockApplication.hpp */,
+				C954138C1F6AA270003DBD1A /* SuperApplication.cpp */,
+				C954138D1F6AA270003DBD1A /* SuperApplication.hpp */,
+			);
+			name = Applications;
+			sourceTree = "<group>";
+		};
+		C9730FE21F68250E00279634 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C9730FDF1F68245B00279634 /* View.cpp */,
+				C9730FE01F68245B00279634 /* View.hpp */,
+				C9662AF71F68768800CF603C /* ImageView.cpp */,
+				C9662AF81F68768800CF603C /* ImageView.hpp */,
+				C9662AFA1F68800400CF603C /* Label.cpp */,
+				C9662AFB1F68800400CF603C /* Label.hpp */,
+				C95413961F6B1659003DBD1A /* Circle.cpp */,
+				C95413971F6B1659003DBD1A /* Circle.hpp */,
+				C9730FE41F68258600279634 /* Structures.h */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		C99078E21F66E33E00A37C6B = {
+			isa = PBXGroup;
+			children = (
+				C99078ED1F66E33F00A37C6B /* SmartwatchMockup */,
+				C99078EC1F66E33F00A37C6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C99078EC1F66E33F00A37C6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99078EB1F66E33F00A37C6B /* SmartwatchMockup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C99078ED1F66E33F00A37C6B /* SmartwatchMockup */ = {
+			isa = PBXGroup;
+			children = (
+				C99079171F67225500A37C6B /* Sketch */,
+				C99079131F6707DF00A37C6B /* Boilerplate */,
+				C99078F11F66E33F00A37C6B /* Supporting Files */,
+			);
+			path = SmartwatchMockup;
+			sourceTree = "<group>";
+		};
+		C99078F11F66E33F00A37C6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C990790D1F66EB2B00A37C6B /* Images */,
+				C99079021F66E3F600A37C6B /* Library */,
+				C99078F21F66E33F00A37C6B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C99079021F66E3F600A37C6B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C9730F461F6808FB00279634 /* Adafruit */,
+				C9730F381F6808C300279634 /* mbed */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		C990790D1F66EB2B00A37C6B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C990790E1F66EB2B00A37C6B /* breakout.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C99079131F6707DF00A37C6B /* Boilerplate */ = {
+			isa = PBXGroup;
+			children = (
+				C99079101F66EC2E00A37C6B /* SWMLCDView.h */,
+				C99079111F66EC2E00A37C6B /* SWMLCDView.mm */,
+				C990790A1F66E5F600A37C6B /* SWMMainViewController.h */,
+				C990790B1F66E5F600A37C6B /* SWMMainViewController.mm */,
+				C99078EE1F66E33F00A37C6B /* AppDelegate.h */,
+				C99078EF1F66E33F00A37C6B /* AppDelegate.m */,
+				C99078F41F66E33F00A37C6B /* Assets.xcassets */,
+				C99078F61F66E33F00A37C6B /* MainMenu.xib */,
+				C99078F91F66E33F00A37C6B /* Info.plist */,
+			);
+			name = Boilerplate;
+			sourceTree = "<group>";
+		};
+		C99079171F67225500A37C6B /* Sketch */ = {
+			isa = PBXGroup;
+			children = (
+				C99079141F67224600A37C6B /* Smartwatch.cpp */,
+				C99079151F67224600A37C6B /* Smartwatch.hpp */,
+				C9730FE21F68250E00279634 /* UI */,
+				C9730FDE1F68217B00279634 /* Applications */,
+			);
+			name = Sketch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C99078EA1F66E33E00A37C6B /* SmartwatchMockup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C99078FC1F66E33F00A37C6B /* Build configuration list for PBXNativeTarget "SmartwatchMockup" */;
+			buildPhases = (
+				C99078E71F66E33E00A37C6B /* Sources */,
+				C99078E81F66E33E00A37C6B /* Frameworks */,
+				C99078E91F66E33E00A37C6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartwatchMockup;
+			productName = SmartwatchMockup;
+			productReference = C99078EB1F66E33F00A37C6B /* SmartwatchMockup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C99078E31F66E33E00A37C6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Matt Clarke";
+				TargetAttributes = {
+					C99078EA1F66E33E00A37C6B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MWMJ98X6F2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C99078E61F66E33E00A37C6B /* Build configuration list for PBXProject "SmartwatchMockup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C99078E21F66E33E00A37C6B;
+			productRefGroup = C99078EC1F66E33F00A37C6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C99078EA1F66E33E00A37C6B /* SmartwatchMockup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C99078E91F66E33E00A37C6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99078F51F66E33F00A37C6B /* Assets.xcassets in Resources */,
+				C99078F81F66E33F00A37C6B /* MainMenu.xib in Resources */,
+				C990790F1F66EB2B00A37C6B /* breakout.png in Resources */,
+				C9730F811F6808FB00279634 /* Tiny3x3a2pt7b in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C99078E71F66E33E00A37C6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C99078F31F66E33F00A37C6B /* main.m in Sources */,
+				C9730F441F6808C300279634 /* Framebuffer.cpp in Sources */,
+				C9730FDA1F681B5200279634 /* Arduino.c in Sources */,
+				C9730F421F6808C300279634 /* font_DejaVuSerif_8.c in Sources */,
+				C9730FE11F68245B00279634 /* View.cpp in Sources */,
+				C95413951F6AE4B1003DBD1A /* ClockApplication.cpp in Sources */,
+				C95413981F6B1659003DBD1A /* Circle.cpp in Sources */,
+				C9730FD71F6811B000279634 /* dtostrf.c in Sources */,
+				C9730F851F68093800279634 /* Adafruit_SharpMem.mm in Sources */,
+				C954138E1F6AA270003DBD1A /* SuperApplication.cpp in Sources */,
+				C9730FD41F68117B00279634 /* itoa.c in Sources */,
+				C9730FDD1F68216200279634 /* Application.cpp in Sources */,
+				C990790C1F66E5F600A37C6B /* SWMMainViewController.mm in Sources */,
+				C9730F431F6808C300279634 /* font_DejaVuSerif_9.c in Sources */,
+				C99079121F66EC2E00A37C6B /* SWMLCDView.mm in Sources */,
+				C9662AFC1F68800400CF603C /* Label.cpp in Sources */,
+				C9730F451F6808C300279634 /* SharpLCD.mm in Sources */,
+				C9730FD11F680D2C00279634 /* WString.cpp in Sources */,
+				C9730FC21F680BA300279634 /* Print.cpp in Sources */,
+				C99079161F67224600A37C6B /* Smartwatch.cpp in Sources */,
+				C9730F821F6808FB00279634 /* glcdfont.c in Sources */,
+				C9662AF91F68768800CF603C /* ImageView.cpp in Sources */,
+				C9730F801F6808FB00279634 /* Adafruit_GFX.cpp in Sources */,
+				C9730F411F6808C300279634 /* font.c in Sources */,
+				C99078F01F66E33F00A37C6B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C99078F61F66E33F00A37C6B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C99078F71F66E33F00A37C6B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C99078FA1F66E33F00A37C6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C99078FB1F66E33F00A37C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C99078FD1F66E33F00A37C6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MWMJ98X6F2;
+				INFOPLIST_FILE = SmartwatchMockup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchstic.SmartwatchMockup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C99078FE1F66E33F00A37C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MWMJ98X6F2;
+				INFOPLIST_FILE = SmartwatchMockup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matchstic.SmartwatchMockup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C99078E61F66E33E00A37C6B /* Build configuration list for PBXProject "SmartwatchMockup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99078FA1F66E33F00A37C6B /* Debug */,
+				C99078FB1F66E33F00A37C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C99078FC1F66E33F00A37C6B /* Build configuration list for PBXNativeTarget "SmartwatchMockup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C99078FD1F66E33F00A37C6B /* Debug */,
+				C99078FE1F66E33F00A37C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C99078E31F66E33E00A37C6B /* Project object */;
+}
