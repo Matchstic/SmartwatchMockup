@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "Structures.h"
 #include "View.hpp"
+#include "Label.hpp"
 #include <list>
 #include <string>
 
@@ -22,6 +23,12 @@ typedef enum : int {
     kClosing,
     kOpening
 } ExecutionState;
+
+typedef enum : int {
+    kTop,
+    kAction,
+    kBottom
+} HardwareButton;
 
 /**
  * An Application hosts all logic for a given application; it is treated as a view controller under MVC.
@@ -111,13 +118,17 @@ public:
         return true;
     }
     
-    virtual std::string applicationName() {
+    const virtual std::string applicationName() {
         return "Application";
     }
     
-    virtual std::string applicationIdentifier() {
+    const virtual std::string applicationIdentifier() {
         return "com.company.name";
     }
+    
+protected:
+    
+    //void drawStatusBar(unsigned long timestamp);
     
 private:
     ExecutionState _execState;
@@ -128,6 +139,8 @@ private:
     View* _rootView;
     
     std::list<std::string> _wakelockQueue;
+    
+    //Label *_statusBar;
 };
 
 #endif /* Application_hpp */

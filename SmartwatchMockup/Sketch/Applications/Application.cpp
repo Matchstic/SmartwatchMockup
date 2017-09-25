@@ -7,12 +7,13 @@
 //
 
 #include "Application.hpp"
+#include "FreeSans9pt7b.h"
 
 Application::Application(/*NotificationManager*/ Size displaySize) {
     _displaySize = displaySize;
     _rootView = new View(rectMake(0, 0, displaySize.width, displaySize.height));
     
-    viewDidLoad();
+    this->viewDidLoad();
 }
 
 Application::~Application() {
@@ -37,3 +38,24 @@ void Application::update(unsigned long timestamp) {
         getRootView()->update(timestamp);
     }
 }
+
+/*void Application::drawStatusBar(unsigned long timestamp) {
+    if (this->_statusBar == nullptr) {
+        this->_statusBar = new Label(rectMake(50, 0, getDisplaySize().width, 24));
+        this->_statusBar->setColor(WHITE, BLACK);
+        this->_statusBar->setFont(&FreeSans9pt7b, 12, 7);
+        
+        this->getRootView()->addSubview(_statusBar);
+    }
+    
+    time_t rawtime = (time_t)timestamp / 1000;
+    struct tm *dt = localtime(&rawtime);
+    
+    int hour = dt->tm_hour;
+    int minute = dt->tm_min;
+    
+    char str[6];
+    sprintf(str, "%0d:%0d", hour, minute);
+
+    this->_statusBar->setText(str);
+}*/
