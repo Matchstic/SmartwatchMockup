@@ -13,6 +13,7 @@
 #include <list>
 #include "Structures.h"
 #include "Adafruit_GFX.h"
+#include "Animation.hpp"
 
 #define BLACK 0
 #define WHITE 1
@@ -39,6 +40,7 @@ public:
     /**
      * Called to start drawing.
      */
+    // TODO: Make a friend of Application and SuperApplication.
     void draw(Point parentOffset);
     
     /**
@@ -50,6 +52,7 @@ public:
      * This is called on every event loop iteration, to allow for doing any updates on a timely basis.
      * @param timestamp The current timestamp in millis
      */
+    // TODO: Make a friend of Application and SuperApplication.
     virtual void update(unsigned long timestamp);
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,6 +69,7 @@ public:
     // Frames
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     
+    // Copies frame to caller.
     Rect getFrame() {
         return this->_frame;
     }
@@ -83,6 +87,18 @@ public:
     }
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Animations
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    void animateWithState(AnimationState *state, float duration, std::function<void()> completion) {
+        Animation *anim = new Animation(this, state, duration);
+        anim->setCompletion(completion);
+        
+        this->_animations.push_back(anim); // Add to update queue.
+        anim->begin();
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Misc. state management
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     
@@ -96,6 +112,7 @@ public:
     
 protected:
     static Adafruit_GFX* _display;
+    std::list<Animation*> _animations;
     
 private:
     Rect _frame;

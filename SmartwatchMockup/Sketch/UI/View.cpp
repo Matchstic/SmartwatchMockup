@@ -36,7 +36,7 @@ Size sizeMake(int width, int height) {
 
 Adafruit_GFX* View::_display = 0;
 
-View::View(Rect frame) : _frame(frame), _hidden(false) {
+View::View(Rect frame) : _frame(frame), _hidden(false), _backgroundColor(TRANSPARENT) {
     
 }
 
@@ -51,7 +51,7 @@ void View::addSubview(View* subview) {
 
 void View::insertSubviewAtIndex(View *subview, int index) {
     if (index > _subviews.size() - 1) {
-        index = 0;
+        index = _subviews.size() - 1;
     } else if (index < 0) {
         throw "InternalInconsistencyException :: Cannot insert at a negative index!";
     }
@@ -110,4 +110,24 @@ void View::_drawSubviews(Point currentOffset) {
 
 void View::update(unsigned long timestamp) {
     
+    // Iterate over the animations list and update them.
+    if (this->_animations.size() > 0) {
+        for (std::list<Animation*>::const_iterator iterator = this->_animations.begin(), end = this->_animations.end(); iterator != end; ++iterator) {
+            Animation *animation = *iterator;
+            if (animation != NULL) {
+                animation->update(timestamp);
+                
+                if (animation->getState() == kEnded) {
+                    iterator = this->_animations.erase(iterator);
+                    delete animation;
+                }
+            }
+        }
+    }
+    
+    // Update all the subviews too!
+    for (std::list<View*>::const_iterator iterator = this->_subviews.begin(), end = this->_subviews.end(); iterator != end; ++iterator) {
+        View *view = *iterator;
+        view->update(timestamp);
+    }
 }
