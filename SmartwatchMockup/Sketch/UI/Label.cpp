@@ -21,5 +21,6 @@ void Label::drawRect(Rect rect) {
     View::_display->setCursor(rect.origin.x, rect.origin.y + _fontsize + _baseline);
     View::_display->setTextColor(this->_foregroundColor, this->_backgroundColor);
     View::_display->setFont(this->_font);
+    View::_display->setTextWrap(false);
     View::_display->print(this->getText().c_str());
 }
