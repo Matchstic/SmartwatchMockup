@@ -54,7 +54,9 @@ const uint8_t aClogoBitmaps[] =
     0x00, 0x03, 0xF8, 0x00, 0x00, //               #######
 };
 
-ClockApplication::ClockApplication(Size displaySize) : Application(displaySize) {
+ClockApplication::ClockApplication(Size displaySize, SuperApplication *superApplication) :
+    Application(displaySize),
+    _superApplication(superApplication) {
     viewDidLoad();
 }
 
@@ -160,10 +162,6 @@ void ClockApplication::update(unsigned long timestamp) {
     int yOffset = (getDisplaySize().height - getDisplaySize().width) / 2;
     
     secondsDot->setFrame(rectMake(x, y + yOffset, 12, 12));
-    
-    if (secs == 0) {
-        
-    }
 }
 
 void ClockApplication::onButtonPress(int button) {
@@ -171,8 +169,11 @@ void ClockApplication::onButtonPress(int button) {
     // - Menu
     // - Application from a notification.
     // That's all on the action button.
-    
-    
+
+    if (button == kAction) {
+        printf("Moving to menu...\n");
+        _superApplication->launchApplication("com.matchstic.menu");
+    }
 }
 
 void ClockApplication::onButtonLongPress(int button) {

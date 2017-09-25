@@ -8,9 +8,13 @@
 
 #include "SuperApplication.hpp"
 #include "ClockApplication.hpp"
+#include "MenuApplication.hpp"
+#include "TimerApplication.hpp"
 
 #define primaryIdentifier "com.matchstic.clock"
 #define menuIdentifier "com.matchstic.menu"
+
+using namespace std;
 
 SuperApplication::SuperApplication(Size displaySize) :
     _displaySize(displaySize),
@@ -36,8 +40,43 @@ void SuperApplication::_buildApplicationList() {
     // TODO: Build a map of all applications, ideally alphabetically on applicationName().
     
     // Primary.
-    ClockApplication *primary = new ClockApplication(_displaySize);
+    ClockApplication *primary = new ClockApplication(_displaySize, this);
+    primary->setApplicationState(kBackground);
     this->_allApplications.insert({primary->applicationIdentifier(), primary});
+    
+    // Timer
+    TimerApplication *timer = new TimerApplication(_displaySize);
+    timer->setApplicationState(kBackground);
+    this->_allApplications.insert({timer->applicationIdentifier(), timer});
+    
+    // INSERT MORE APPLICATIONS HERE pls.
+    
+    // Menu - is last to capture all applications.
+    MenuApplication *menu = new MenuApplication(_displaySize, this);
+    menu->setApplicationState(kBackground);
+    this->_allApplications.insert({menu->applicationIdentifier(), menu});
+}
+
+std::list<Application*> *SuperApplication::getAllMenuApplications() {
+    list<Application *> *menuApplications = new list<Application*>();
+    
+    // Iterate over ALL applications. We only add ones that can be shown in the menu.
+    for (map<string, Application*>::const_iterator iterator = this->_allApplications.begin(), end = this->_allApplications.end(); iterator != end; ++iterator) {
+        Application *application = iterator->second;
+        
+        if (application->showInMenu()) {
+            printf("Adding... %s\n", application->applicationName().c_str());
+            menuApplications->push_back(application);
+        } else {
+            printf("Not adding... %s\n", application->applicationName().c_str());
+        }
+    }
+    
+    menuApplications->sort([](Application *a, Application *b) {
+        return a->applicationName() < b->applicationName();
+    });
+    
+    return menuApplications;
 }
 
 Application *SuperApplication::_getApplicationWithIdentifier(std::string identifier) {
@@ -64,13 +103,20 @@ void SuperApplication::update(unsigned long timestamp) {
 }
 
 void SuperApplication::onButtonPress(int button) {
+    printf("Button: %d was pressed!\n", button);
+    
     if (this->_currentApplication != NULL) {
         this->_currentApplication->onButtonPress(button);
     }
 }
 
 void SuperApplication::onButtonLongPress(int button) {
-    if (this->_currentApplication != NULL) {
+    printf("Button: %d was long-pressed!\n", button);
+    
+    if (button == kAction) {
+        // Back to home we go!
+        this->_transitionToPrimaryFromApplication();
+    } else if (this->_currentApplication != NULL) {
         this->_currentApplication->onButtonLongPress(button);
     }
 }
@@ -78,10 +124,8 @@ void SuperApplication::onButtonLongPress(int button) {
 void SuperApplication::launchApplication(std::string applicationIdentifier) {
     switch (_displayState) {
         case kPrimary:
-            this->_transitionToApplicationFromPrimary(applicationIdentifier);
-            break;
         case kMenu:
-            this->_transitionToApplicationFromMenu(applicationIdentifier);
+            this->_transitionToApplication(applicationIdentifier);
             break;
         case kApplication:
         default:
@@ -91,35 +135,93 @@ void SuperApplication::launchApplication(std::string applicationIdentifier) {
 }
 
 void SuperApplication::closeCurrentApplication() {
-    
+    this->_transitionToPrimaryFromApplication();
 }
 
 void SuperApplication::_transitionToPrimaryFromBoot() {
     this->_currentApplication = this->_getApplicationWithIdentifier(primaryIdentifier);
     this->_currentApplication->setApplicationState(kForeground);
     
+    // Setup incoming frame for animations.
+    this->_currentApplication->getRootView()->setFrame(rectMake(0, _displaySize.height, _displaySize.width, _displaySize.height));
+    
     this->_rootView->addSubview(this->_currentApplication->getRootView());
     
-    // TODO: Animate the primary into view?
+    // Animate the primary into view
+    AnimationState *newApplicationState = animationStateMake(this->_currentApplication->getRootView());
+    newApplicationState->frame.origin.y = 0;
+    
+    this->_currentApplication->getRootView()->animateWithState(newApplicationState, 0.15, [this]() {
+        // nop.
+    });
 }
 
-void SuperApplication::_transitionToMenuFromPrimary() {
-    // TODO
+void SuperApplication::_transitionToPrimaryFromApplication() {
+    
+    if (this->_displayState == kPrimary) {
+        // No need to return again!
+        return;
+    }
+    
+    Application *previousApplication = this->_currentApplication;
+    previousApplication->setApplicationState(kClosing);
+    
+    this->_currentApplication = this->_getApplicationWithIdentifier(primaryIdentifier);
+    this->_currentApplication->setApplicationState(kOpening);
+    this->_displayState = kPrimary;
+    
+    // Setup incoming frame for animations.
+    this->_currentApplication->getRootView()->setFrame(rectMake(-_displaySize.width, 0, _displaySize.width, _displaySize.height));
+    
+    this->_rootView->addSubview(this->_currentApplication->getRootView());
+    
+    // Animations.
+    
+    AnimationState *previousApplicationState = animationStateMake(previousApplication->getRootView());
+    previousApplicationState->frame.origin.x = _displaySize.width;
+    
+    AnimationState *newApplicationState = animationStateMake(this->_currentApplication->getRootView());
+    newApplicationState->frame.origin.x = 0;
+    
+    previousApplication->getRootView()->animateWithState(previousApplicationState, 0.15, [previousApplication](){
+        previousApplication->getRootView()->removeFromSuperview();
+        previousApplication->setApplicationState(kBackground);
+    });
+    
+    this->_currentApplication->getRootView()->animateWithState(newApplicationState, 0.15, [this]() {
+        this->_currentApplication->setApplicationState(kForeground);
+    });
 }
 
-void SuperApplication::_transitionToPrimaryFromMenu() {
-    // TODO
-}
-
-void SuperApplication::_transitionToPrimaryFromApplication(std::string applicationIdentifier) {
-    // TODO
-}
-
-void SuperApplication::_transitionToApplicationFromMenu(std::string applicationIdentifier) {
-    // TODO
-}
-
-void SuperApplication::_transitionToApplicationFromPrimary(std::string applicationIdentifier) {
-    // TODO
+void SuperApplication::_transitionToApplication(std::string applicationIdentifier) {
+    
+    Application *previousApplication = this->_currentApplication;
+    previousApplication->setApplicationState(kClosing);
+    
+    this->_currentApplication = this->_getApplicationWithIdentifier(applicationIdentifier);
+    this->_currentApplication->setApplicationState(kOpening);
+    this->_displayState = !strcmp(applicationIdentifier.c_str(), menuIdentifier) ? kMenu : kApplication;
+    
+    // Setup incoming frame for animations.
+    this->_currentApplication->getRootView()->setFrame(rectMake(_displaySize.width, 0, _displaySize.width, _displaySize.height));
+    
+    this->_rootView->addSubview(this->_currentApplication->getRootView());
+    
+    // Animations
+    
+    AnimationState *previousApplicationState = animationStateMake(previousApplication->getRootView());
+    previousApplicationState->frame.origin.x = -_displaySize.width;
+    
+    AnimationState *newApplicationState = animationStateMake(this->_currentApplication->getRootView());
+    newApplicationState->frame.origin.x = 0;
+    
+    previousApplication->getRootView()->animateWithState(previousApplicationState, 0.15, [previousApplication](){
+        previousApplication->getRootView()->removeFromSuperview();
+        previousApplication->setApplicationState(kBackground);
+    });
+    
+    this->_currentApplication->getRootView()->animateWithState(newApplicationState, 0.15, [this]() {
+        this->_currentApplication->setApplicationState(kForeground);
+    });
 }
 

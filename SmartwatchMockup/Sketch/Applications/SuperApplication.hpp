@@ -41,6 +41,8 @@ public:
         return _currentApplication != NULL ? _currentApplication->hasWakelockSet() : false;
     }
     
+    std::list<Application*> *getAllMenuApplications();
+    
 private:
     Application *_currentApplication;
     std::map<std::string, Application*> _allApplications;
@@ -54,11 +56,9 @@ private:
     Size _displaySize;
     
     void _transitionToPrimaryFromBoot();
-    void _transitionToMenuFromPrimary();
-    void _transitionToPrimaryFromMenu();
-    void _transitionToPrimaryFromApplication(std::string applicationIdentifier);
-    void _transitionToApplicationFromMenu(std::string applicationIdentifier);
-    void _transitionToApplicationFromPrimary(std::string applicationIdentifier);
+    void _transitionToPrimaryFromApplication();
+    
+    void _transitionToApplication(std::string applicationIdentifier);
 };
 
 #endif /* SuperApplication_hpp */

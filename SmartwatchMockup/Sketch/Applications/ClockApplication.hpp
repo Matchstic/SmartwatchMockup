@@ -14,10 +14,11 @@
 #include <string>
 #include "Label.hpp"
 #include "Circle.hpp"
+#include "SuperApplication.hpp"
 
 class ClockApplication : public Application {
 public:
-    ClockApplication(Size displaySize);
+    ClockApplication(Size displaySize, SuperApplication *superApplication);
     ~ClockApplication();
     
     void viewDidLoad();
@@ -30,11 +31,11 @@ public:
         return false;
     }
     
-    std::string applicationName() {
+    const std::string applicationName() {
         return "Clock";
     }
     
-    std::string applicationIdentifier() {
+    const std::string applicationIdentifier() {
         return "com.matchstic.clock";
     }
     
@@ -42,6 +43,8 @@ private:
     Label *hourLabel;
     Label *minuteLabel;
     Circle *secondsDot;
+    
+    SuperApplication *_superApplication;
 };
 
 #endif /* ClockApplication_hpp */
