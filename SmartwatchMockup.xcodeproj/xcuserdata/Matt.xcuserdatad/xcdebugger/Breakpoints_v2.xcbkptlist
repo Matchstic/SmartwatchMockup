@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartwatchMockup/Sketch/Applications/ClockApplication.cpp"
-            timestampString = "527112536.750308"
+            timestampString = "527991374.903997"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "ClockApplication::update(unsigned long timestamp)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartwatchMockup/Sketch/Applications/ClockApplication.cpp"
-            timestampString = "527112536.750308"
+            timestampString = "527991374.904086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "ClockApplication::update(unsigned long timestamp)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartwatchMockup/Sketch/Applications/ClockApplication.cpp"
-            timestampString = "527112536.750308"
+            timestampString = "527991374.904154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "ClockApplication::update(unsigned long timestamp)"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,14 +57,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SmartwatchMockup/Sketch/Applications/ClockApplication.cpp"
-            timestampString = "527115852.592179"
+            filePath = "SmartwatchMockup/Sketch/Applications/MenuApplication.cpp"
+            timestampString = "528068395.487077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "ClockApplication::update(unsigned long timestamp)"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "MenuApplication::MenuApplication(Size displaySize, SuperApplication *superApplication)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MenuApplication::MenuApplication(Size, SuperApplication*)"
+                  moduleName = "SmartwatchMockup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matt/Microcontrollers/Development/SmartwatchMockup/SmartwatchMockup/Sketch/Applications/MenuApplication.cpp"
+                  timestampString = "527710737.403598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "358">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MenuApplication::MenuApplication(Size, SuperApplication*)"
+                  moduleName = "SmartwatchMockup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matt/Microcontrollers/Development/SmartwatchMockup/SmartwatchMockup/Sketch/Applications/MenuApplication.cpp"
+                  timestampString = "527710737.406353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
