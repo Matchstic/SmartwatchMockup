@@ -32,7 +32,7 @@ All applications are managed by a <code>SuperApplication</code>, which handles s
 
 I have also built a basic UI library that resembles <code>UIKit</code> in its structure.
 
-All code for the smartwatch is found in <code>/Sketch</code>, with stubbed libraries in <code>/Library</code>.
+All code for the smartwatch is found in <code>/Sketch</code>, with stubbed libraries in <code>/Library</code>, and the UI library in <code>/Sketch/UI</code>.
 
 ## Notes
 
