@@ -8,10 +8,18 @@
 
 #include "ListView.hpp"
 
+/*
+ * TODO:
+ * - Implement a "scrollbar-esque" UI to indicate scroll progress
+ * - Implement highlighting the currently selected item
+ * - Ensure the above can each be toggled on/off.
+ */
+
 #define SCROLL_DURATION 0.15
 
 ListView::ListView(Rect frame) : View(frame),
-    _currentIndex(0) {
+    _currentIndex(0),
+    _highlightSelection(false) {
     this->setBackgroundColor(TRANSPARENT);
 }
 
@@ -137,4 +145,11 @@ void ListView::moveBackwardsByIndexCount(int indexCount) {
     int newIndex = _currentIndex - indexCount;
     
     this->moveToIndex(newIndex);
+}
+
+void ListView::drawRect(Rect rect) {
+    if (_highlightSelection) {
+        // Invert the pixels at the center item.
+        
+    }
 }

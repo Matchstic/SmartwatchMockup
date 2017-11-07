@@ -23,6 +23,8 @@ public:
     ListView(Rect frame);
     ~ListView();
     
+    void drawRect(Rect rect);
+    
     // Direction to scroll in.
     void setDirection(ListViewDirection dir) {
         _direction = dir;
@@ -31,6 +33,10 @@ public:
     // Set the size each view is to be.
     void setItemSize(int size) {
         _itemSize = size;
+    }
+    
+    void setHighlightSelection(bool highlightSelection) {
+        
     }
     
     // Item management.
@@ -49,6 +55,7 @@ public:
 private:
     int _itemSize;
     ListViewDirection _direction;
+    bool _highlightSelection;
     
     // Scrollbar.
     View *_scrollBarOuterView;

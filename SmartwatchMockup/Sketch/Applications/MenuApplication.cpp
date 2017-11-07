@@ -27,8 +27,9 @@ void MenuApplication::viewDidLoad() {
     // Iterate over the application list, and make views.
     // Item height = displayheight/3.
     
+    int itemHeight = getDisplaySize().height / 3;
+    
     this->listView = new ListView(rectMake(0, 0, getDisplaySize().width, getDisplaySize().height));
-    int itemHeight = getDisplaySize().height / 4;
     this->listView->setItemSize(itemHeight);
     this->listView->setDirection(kVertical);
     
@@ -50,6 +51,7 @@ void MenuApplication::viewDidLoad() {
         listView->addNewItem(baseView);
     }
     
+    // Make sure to run a first layout, and then we're rolling.
     this->listView->moveToIndex(0);
     
     /*for (std::list<Application*>::const_iterator iterator = this->_applications->begin(), end = this->_applications->end(); iterator != end; ++iterator) {
@@ -60,13 +62,6 @@ void MenuApplication::viewDidLoad() {
         Label *applicationLabel = new Label(rectMake(10, 10, getDisplaySize().width - 20, itemHeight - 20));
         
     }*/
-    
-    /*Label *hourLabel = new Label(rectMake(10, 40, getDisplaySize().width, 24));
-    hourLabel->setText("MENU");
-    hourLabel->setColor(WHITE, BLACK);
-    hourLabel->setFont(&FreeSansBold18pt7b, 12, 7);
-    
-    getRootView()->addSubview(hourLabel);*/
 }
 
 void MenuApplication::update(unsigned long timestamp) {
@@ -85,7 +80,8 @@ void MenuApplication::onButtonPress(int button) {
     } else if (button == kBottom) {
         listView->moveForwardsByIndexCount(1);
     } else if (button == kAction) {
-        listView->removeItemAtIndex(3);
+        // Launch the selected application!
+        printf("Selected: %d\n", listView->getCurrentIndex());
     }
 }
 
