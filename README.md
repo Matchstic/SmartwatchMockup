@@ -24,3 +24,5 @@ I use the concept of "pseudo-applications" to encapsulate functionality into dis
 All applications are managed by a <code>SuperApplication</code>, which handles switching between applications, managing their root views, forwarding button events, and so forth. For those familiar with iOS, think of it as an iOS 1 era <code>SpringBoard</code>.
 
 I have also built a basic UI library that resembles <code>UIKit</code> in its structure.
+
+All code for the smartwatch is found in <code>/Sketch</code>, with stubbed libraries in <code>/Library</code>.
