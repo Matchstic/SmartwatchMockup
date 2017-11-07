@@ -15,7 +15,7 @@ The mockup is currently interactable, with 3 buttons defined for use, mapped to 
 - 3 is the "action" button. 
   - Press once to select an item, or move to the menu from the watchface. 
   - Hold for a short duration to return to the watchface.
-- 5 is mapped to move up.
+- 4 is mapped to move up.
 - 6 is mapped to move down.
 
 ## Underlying principles
