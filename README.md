@@ -26,3 +26,19 @@ All applications are managed by a <code>SuperApplication</code>, which handles s
 I have also built a basic UI library that resembles <code>UIKit</code> in its structure.
 
 All code for the smartwatch is found in <code>/Sketch</code>, with stubbed libraries in <code>/Library</code>.
+
+## Notes
+
+Whilst this code is public, it is very much a work in progress, and is slow progress at that.
+
+Completed components:
+- Switching between applications and setting application state
+- Basic UI and animation library
+- First watchface
+
+TODO:
+- Cubic bezier curves on animations
+- Implement a "scrollbar-esque" UI to indicate scroll progress on <code>ListView</code>
+- Implement highlighting the currently selected item in a <code>ListView</code>
+- Add more applications
+- ...?
