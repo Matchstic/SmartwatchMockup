@@ -11,6 +11,13 @@ Generally, as long as it lasts 3 months on a charge/battery, I'm happy.
 
 To test code before running it on real hardware, I have stubbed libraries that will be utilised in the final real product such that they run on macOS. As a result, I can write code for the smartwatch on top of an "emulated" Arduino, greatly increasing the pace of development.
 
+The mockup is currently interactable, with 3 buttons defined for use, mapped to number keys:
+- 3 is the "action" button. 
+  - Press once to select an item, or move to the menu from the watchface. 
+  - Hold for a short duration to return to the watchface.
+- 5 is mapped to move up.
+- 6 is mapped to move down.
+
 ## Underlying principles
 
 This project is wholly written in <code>C++</code>.
